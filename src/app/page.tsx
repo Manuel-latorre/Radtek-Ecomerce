@@ -1,6 +1,7 @@
 'use client'
-import React from "react";
-import Products from "@/components/Products/Products";
+
+
+import Products from "./products/page";
 
 
 export default function Home() {

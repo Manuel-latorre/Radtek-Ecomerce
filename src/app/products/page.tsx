@@ -1,10 +1,9 @@
 'use client'
 
-import React, { useState, useEffect } from 'react';
-import Product from './CardProduct';
-import style from './Product.module.css'
 
-
+import CardProduct from "@/components/Products/CardProduct";
+import { useEffect, useState } from "react";
+import style from './Products.module.css'
 export interface Product {
     _id: string,
     id: number,
@@ -29,16 +28,19 @@ async function fetchProducts(): Promise<Product[]> {
 export default function Products() {
   const [products, setProducts] = useState<Product[]>([]);
 
-  useEffect(() => {
+    useEffect(() => {
     
-    fetchProducts().then((data) => setProducts(data));
+    fetchProducts()
+    .then((data) => setProducts(data));
   }, []);
 
-  return (
-    <div className={style.products_container}>
-        {products.map((product) => (
-            <Product product={product} key={product._id}/>
-        ))}
+  return(
+    <div className={style.cards_container}>
+       {
+        products.map((prod) => (
+            <CardProduct product={prod} key={prod._id}/>
+        ))
+       }
     </div>
-  );
+  )
 }
