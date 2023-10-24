@@ -1,0 +1,41 @@
+.NavContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #262626;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.presentacion{
+    background-color: #616161;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.linksContainer{
+    padding-right: 90px;
+}
+.searchBar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+}
+.inputSearchBar{
+    background: none;
+    border-bottom: 1px solid white;
+    width: 323px;
+    color: white;
+}
+.real{
+    display: flex;
+}
+.searchBarIcon{
+    transform: translateX(-30px);
+    padding-bottom: 10px;
+}
